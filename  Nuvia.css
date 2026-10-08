@@ -1,0 +1,169 @@
+body {
+  background: #e9ddff;
+  color: #39264f;
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+header {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(#f5e2ff);
+  min-height: 250px;
+
+  position: relative;
+  overflow: hidden;
+}
+.cloud {
+  position: absolute;
+
+  width: 120px;
+  height: 60px;
+
+  background: #f5e2ff;
+
+  top: 20px;
+  left: 20px;
+
+  opacity: 0.9;
+}
+
+.cloud::before {
+  content: "";
+  position: absolute;
+
+  width: 60px;
+  height: 60px;
+
+  background: #ffffff;
+  top: -20px;
+  left:20px;
+  border-radius: 50%;
+}
+.cloud::after {
+  content: "";
+
+  position: absolute;
+
+  width: 70px;
+  height: 70px;
+
+  background: white;
+
+  border-radius: 50%;
+
+  top: -25px;
+  right: 15px;
+}
+.cloud1 {
+  top: 30px;
+  left: 100px;
+  animation: drift 14
+}
+
+.cloud2 {
+  top: 160px;
+  bottom: 60px;
+}
+
+.cloud3 {
+  top: 84px;
+  left: 470px;
+}
+
+.cloud4 {
+  top: 180px;
+  left: 640px;
+}
+
+header h1 {
+ text-shadow:
+    0 0 10px white,
+    0 0 20px mediumvioletred,
+    0 0 35px lavenderblush;
+    animation: float ease-in-out 6s infinite;
+}
+header h3 {
+  text-shadow:
+    0 0 10px white,
+    0 0 20px blueviolet,
+    0 0 35px lavenderblush;
+    animation: float ease-in-out 6s infinite;
+    animation-delay: 2s;
+}
+
+section {
+  background: #ffe8f1;
+  margin: 30px auto;
+  padding: 30px;
+  max-width: 700px;
+  border-radius: 50px;
+}
+
+.favorite {
+  background: lightgoldenrodyellow;
+  padding: 20px;
+  margin: 0;
+  flex: 1;
+  border-radius: 15px;
+  box-shadow: 
+    0 0 30px blanchedalmond,
+    0 0 50px palevioletred,
+    0 0 49px lavenderblush;
+  animation: float ease-in-out 6s infinite;
+}
+
+.favorite:hover {
+    box-shadow: 
+      0 0 40px blanchedalmond,
+      0 0 60px palevioletred,
+      0 0 70px lavenderblush;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(-8px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.favorite:nth-child(2) {
+    animation-delay: 1s;
+}
+
+.favorite:nth-child(3) {
+    animation-delay: 1.5s;
+}
+
+.favorites {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  opacity: 0.8;
+}
+
+@keyframes drift {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(20px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
